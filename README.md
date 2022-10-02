@@ -42,6 +42,7 @@ An small app that has one api to create an order and notify operation by sending
 
 Now, open your web browser and go to `http://localhost:8080/api/documentation` and check the swagger documentation and try it out.
 
+
 ## Important Environment variables (dev)
 
 | Name | Type | Default | Description |
@@ -64,8 +65,11 @@ Now, open your web browser and go to `http://localhost:8080/api/documentation` a
 | `MAIL_USERNAME` | `string` | `empty` | mail host user name|
 | `MAIL_PASSWORD` | `string` | `empty` | mail host password|
 
-![Database Diagram](https://github.com/abeer93/restaurants-management/master/sql-model?raw=true)
-![Low Stock Email](https://github.com/abeer93/restaurants-management/master/low-stock-email?raw=true)
+
+### Images
+
+![Database Diagram](https://github.com/abeer93/restaurants-management/blob/master/sql-model.png)
+![Low Stock Email](https://github.com/abeer93/restaurants-management/blob/master/low-stock-email.png)
 
 ### Docs & Help
 
