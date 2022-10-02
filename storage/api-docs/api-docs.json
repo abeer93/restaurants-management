@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Orders Service APIs",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api": {},
+        "/api/orders": {
+            "post": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "add new order",
+                "description": "add Order",
+                "operationId": "6d1db39c567c2ada2f69269950986b0b",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "products": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "product_id": {
+                                                    "type": "integer",
+                                                    "example": 10
+                                                },
+                                                "quantity": {
+                                                    "type": "integer",
+                                                    "example": 3
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Created Successfully."
+                                        },
+                                        "order_id": {
+                                            "type": "integer",
+                                            "example": 13
+                                        },
+                                        "total_price": {
+                                            "type": "integer",
+                                            "example": 350
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Sorry, something wrong happened please try again later."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "The selected products.0.product_id is invalid. (and 1 more error)"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "products.0.product_id": {
+                                                        "type": "string",
+                                                        "example": "The selected products.0.product_id is invalid."
+                                                    },
+                                                    "products.0.quantity": {
+                                                        "type": "string",
+                                                        "example": [
+                                                            "The products.0.quantity must be an integer.",
+                                                            "The products.0.quantity must be at least 1."
+                                                        ]
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
