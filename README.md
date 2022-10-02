@@ -34,13 +34,19 @@ An small app that has one api to create an order and notify operation by sending
   ```
     app php artisan migrate --seed
   ```
-7. Run test cases before running next commands please make sure fill all databse test variables which begin with DB_TEST_ in .env file.
+7. Run test cases
+    before running next commands please make sure fill all databse test variables which begin with DB_TEST_ in .env file.
+
   ```
     php artisan optimize:clear
     vendor/bin/phpunit
   ```
+8. Run Servers
+  ```
+    php artisan serve --port 8080
+  ```
 
-
+### Test The APP
 Now, open your web browser and go to `http://localhost:8080/api/documentation` and check the swagger documentation and try it out.
 
 
