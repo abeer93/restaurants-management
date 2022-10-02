@@ -12,15 +12,13 @@ An small app that has one api to create an order and notify operation by sending
   ```
     git clone https://github.com/abeer93/restaurants-management.git
   ```
-
 2. Enter inside the folder
-```
-  cd restaurants-management
-```
+  ```
+    cd restaurants-management
+  ```
 3. Create a `.env` file by running the following command
   ```
     cp .env.example .env
-  ```
   ```
 4. Install various packages and dependencies:
   ```
@@ -36,7 +34,6 @@ An small app that has one api to create an order and notify operation by sending
   ```
 7. Run test cases
     before running next commands please make sure fill all databse test variables which begin with DB_TEST_ in .env file.
-
   ```
     php artisan optimize:clear
     vendor/bin/phpunit
@@ -46,7 +43,7 @@ An small app that has one api to create an order and notify operation by sending
     php artisan serve --port 8080
   ```
 
-### Test The APP
+## Test The APP
 Now, open your web browser and go to `http://localhost:8080/api/documentation` and check the swagger documentation and try it out.
 
 
@@ -73,12 +70,10 @@ Now, open your web browser and go to `http://localhost:8080/api/documentation` a
 | `MAIL_PASSWORD` | `string` | `empty` | mail host password|
 
 
-### Images
-
+## Images
 ![Database Diagram](https://github.com/abeer93/restaurants-management/blob/master/sql-model.png)
 ![Low Stock Email](https://github.com/abeer93/restaurants-management/blob/master/low-stock-email.png)
 
 ### Docs & Help
-
 - [Laravel 9.x Documentation](https://laravel.com/docs/9.x)
 - [DarkOnlineSwagger Documentation](https://github.com/DarkaOnLine/L5-Swagger)
